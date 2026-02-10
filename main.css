@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --yellow-beige: #fff9f4;
+    --teal-blue: #267988;
+    --orange: #ff7e3f;
+    --green: #477d14;
+    --white: #fff;
+    --black: #000; 
+}
