@@ -47,7 +47,21 @@ header h1 {
 
 .title img {
     width: 3.5em;
-    /* i want to make this bigger */
+    /* i want to make this bigger/cut-off at the header like in the graphics*/
+}
+
+.title-name {
+    margin-left: .5em;
+}
+
+button {
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--orange);
+    background-color: white;
+    padding: .20em;
+    /* make round like my portfolio button? */
 }
 
 h2 {
