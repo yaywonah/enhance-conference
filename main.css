@@ -58,10 +58,10 @@ button {
     border: none;
     font-size: 1rem;
     font-weight: bold;
-    color: var(--orange);
-    background-color: white;
-    padding: .20em;
-    /* make round like my portfolio button? */
+    color: white;
+    background-color: var(--teal-blue);
+    padding: .25em .5em;
+    border-radius: .5em;
 }
 
 h2 {
@@ -69,7 +69,37 @@ h2 {
     font-size: 1.75rem;
 }
 
-p {
+section p {
     margin: 1em;
-    font-size: 1.1rem;
+    font-size: 1rem;
+}
+
+.speaker-single {
+    background-color: pink;
+    display: flex;
+    margin: 1em;
+}
+
+.speaker-single img {
+    width: 40%;
+    margin-right: 1em;
+}
+
+footer {
+    background-color: var(--yellow-beige);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;  
+    }
+}
+
+@media (min-width: 768px) {
+ /*tablet*/
+}
+
+@media (min-width: 1200px) {
+    /* desktop */
+
 }
