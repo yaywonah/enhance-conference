@@ -12,22 +12,22 @@ html {
 :root {
     --yellow-beige: #fff9f4;
     --teal-blue: #267988;
+    --teal-blue-opacity: rgba(38, 121, 136, 0.5);
     --orange: #ff7e3f;
+    --orange-opacity: rgba(255, 126, 63, 0.3);
     --green: #477d14;
     --white: #fff;
     --black: #000; 
 }
 
 header {
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
     position: sticky;
     top: 0;
     background-color: var(--yellow-beige);
     padding: 1em;
-    margin-bottom: 1em;
-    /* look up margin/padding */
 }
 
 .enhanceblue {
@@ -43,6 +43,7 @@ header h1 {
 .title {
     display: flex;
     align-items: center;
+    margin-bottom: 1em;
 }
 
 .title img {
@@ -52,6 +53,18 @@ header h1 {
 
 .title-name {
     margin-left: .5em;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--green);
+    font-weight: bold;
 }
 
 button {
@@ -64,13 +77,24 @@ button {
     border-radius: .5em;
 }
 
-h2 {
-    margin: 1em;
-    font-size: 1.75rem;
+main {
+    margin: 0 1em;
+    padding: 1em;
 }
 
-section p {
-    margin: 1em;
+h2 {
+    font-size: 1.75rem;
+    margin: .5em 1em;
+    padding: 0 .5em;
+}
+
+.overview-title {
+    color: var(--teal-blue);
+    background-color: var(--orange-opacity);
+    width: 6em;
+}
+
+p {
     font-size: 1rem;
 }
 
@@ -83,6 +107,23 @@ section p {
 .speaker-single img {
     width: 40%;
     margin-right: 1em;
+}
+
+/*consider changing this to a div and using background-image*/
+
+.speaker-single-text {
+    display: column;
+    padding-top: 1em;
+    padding-right: .5em;
+    padding-bottom: 1em;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.headline {
+    font-size: .89rem;
 }
 
 footer {
