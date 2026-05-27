@@ -12,10 +12,11 @@ html {
 :root {
     --yellow-beige: #fff9f4;
     --teal-blue: #267988;
-    --teal-blue-opacity: rgba(38, 121, 136, 0.5);
+    --teal-blue-opacity: rgba(38, 121, 136, 0.2);
     --orange: #ff7e3f;
     --orange-opacity: rgba(255, 126, 63, 0.3);
     --green: #477d14;
+    --green-opacity: rgba(71, 125, 20, 0.5);
     --white: #fff;
     --black: #000; 
 }
@@ -89,10 +90,20 @@ h2 {
     padding: 0 .5em;
 }
 
+section {
+    margin-bottom: 2em;
+}
+
 .overview-title {
     color: var(--teal-blue);
     background-color: var(--orange-opacity);
     width: 6em;
+}
+
+.who-we-are {
+    color: var(--green);
+    background-color: var(--teal-blue-opacity);
+    width: 7.5em;
 }
 
 p {
@@ -100,9 +111,14 @@ p {
 }
 
 .speaker-single {
-    background-color: pink;
+    background-color: var(--orange-opacity);
     display: flex;
     margin: 1em;
+    /* box-shadow: ; */
+}
+
+.speaker-description {
+    margin-bottom: 2em;
 }
 
 .speaker-single img {
@@ -144,5 +160,52 @@ footer {
 
 @media (min-width: 1200px) {
     /* desktop */
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* .title {
+        
+    } */
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        padding: 0.625rem 0.625rem;
+    }
+
+    section {
+        padding: 1em 2em;
+        margin-bottom: 0em;
+    }
+
+    .speakers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .speaker-single {
+        width: 75%;
+        /* rounded corners and also a box shadow */
+    }
+
+    .speaker-single img {
+        width: 25%;
+    }
+
+    /* .speaker-single-text {
+        width: 350px;
+    } */
 
 }
