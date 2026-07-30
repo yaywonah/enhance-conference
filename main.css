@@ -18,17 +18,19 @@ html {
     --green: #477d14;
     --green-opacity: rgba(71, 125, 20, 0.5);
     --white: #fff;
-    --black: #000; 
+    --black: #000;
 }
 
 header {
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
     position: sticky;
     top: 0;
     background-color: var(--yellow-beige);
     padding: 1em;
+    background-image: url("/img/cadeuceus.png");
+    background-size: 11em;
+    background-repeat: no-repeat;
+    background-position: -5%;
+    border-bottom: solid 3px var(--green);
 }
 
 .enhanceblue {
@@ -47,11 +49,6 @@ header h1 {
     margin-bottom: 1em;
 }
 
-.title img {
-    width: 3.5em;
-    /* i want to make this bigger/cut-off at the header like in the graphics*/
-}
-
 .title-name {
     margin-left: .5em;
 }
@@ -67,6 +64,12 @@ nav ul li a {
     color: var(--green);
     font-weight: bold;
     text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    background-color: var(--teal-blue-opacity);
+    padding: 0.625em 0.625em;
+    border-radius: 1.875em;
 }
 
 button {
@@ -88,10 +91,20 @@ h2 {
     font-size: 1.75rem;
     margin: .5em 1em;
     padding: 0 .5em;
+    text-align: center;
 }
 
 section {
     margin-bottom: 2em;
+}
+
+.overview-title,
+.who-we-are,
+.proposal-title,
+.contact-title {
+    display: block;
+    margin: auto;
+    margin-bottom: 1em;
 }
 
 .overview-title {
@@ -111,10 +124,13 @@ p {
 }
 
 .speaker-single {
-    background-color: var(--orange-opacity);
     display: flex;
+    flex-direction: column;
     margin: 1em;
+    justify-content: center;
+    align-items: center;
     /* box-shadow: ; */
+    /* background-color: var(--orange-opacity); */
 }
 
 .speaker-description {
@@ -122,17 +138,21 @@ p {
 }
 
 .speaker-single img {
-    width: 35%;
-    margin-right: 1em;
+    max-width: 60%;
+    height: auto;
+    padding-bottom: 1em;
 }
 
 /*consider changing this to a div and using background-image*/
 
 .speaker-single-text {
-    display: column;
-    padding-top: 1em;
-    padding-right: .5em;
-    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange-opacity);
+    padding: 1em;
+    /* margin: 1em; */
 }
 
 .name {
@@ -144,18 +164,76 @@ p {
     margin-bottom: .5em;
 }
 
-footer {
-    background-color: var(--yellow-beige);
+/* .proposal-info-one, .proposal-info-two {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+} */
+
+.proposal-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.proposal-info div {
+    margin-bottom: 1em;
+}
+
+.proposal-info .name {
+    text-transform: uppercase;
+    font-size: 1.25em;
+}
+
+.right-name {
+    font-weight: bold;
+}
+
+.first-bullets {
+    padding-top: 1em;
+    padding-left: 2em;
+}
+
+.second-bullets {
+    padding-left: 2em;
+}
+
+.proposal-title {
+    color: var(--orange);
+    background-color: var(--teal-blue-opacity);
+    width: 8.5em;
+}
+
+.contact-title {
+    color: var(--teal-blue);
+    background-color: var(--green-opacity);
+    width: 5.5em;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-icons li {
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons li i {
+    font-size: 1.875rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
     html {
-        scroll-behavior: smooth;  
+        scroll-behavior: smooth;
     }
 }
 
 @media (min-width: 768px) {
- /*tablet*/
+    /*tablet*/
 }
 
 @media (min-width: 1200px) {
@@ -189,6 +267,14 @@ footer {
         margin-bottom: 0em;
     }
 
+    .overview-title,
+    .who-we-are,
+    .proposal-title {
+        display: flex;
+        margin: 0;
+        margin-bottom: 1em;
+    }
+
     .speakers {
         display: flex;
         flex-direction: column;
@@ -196,16 +282,31 @@ footer {
     }
 
     .speaker-single {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 1em;
         width: 75%;
         /* rounded corners and also a box shadow */
     }
 
     .speaker-single img {
         width: 25%;
+        margin-right: 1em;
     }
 
-    /* .speaker-single-text {
-        width: 350px;
-    } */
+    .speaker-single-text {
+        align-items: baseline;
+        padding-top: 1em;
+        padding-right: .5em;
+        padding-bottom: 1em;
+    }
+
+    .proposal-info {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1em;
+        justify-content: space-around;
+    }
 
 }
