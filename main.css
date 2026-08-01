@@ -270,6 +270,10 @@ footer .social-icons {
         padding: 0.625rem 0.625rem;
     }
 
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
     section, .contact-wrapper {
         padding: 1em 2em;
         margin-bottom: 0em;
