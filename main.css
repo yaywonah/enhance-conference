@@ -269,14 +269,14 @@ footer .social-icons {
         padding: 0.625rem 0.625rem;
     }
 
-    section {
+    section, .contact-wrapper {
         padding: 1em 2em;
         margin-bottom: 0em;
     }
 
     .overview-title,
     .who-we-are,
-    .proposal-title {
+    .proposal-title, .contact-title {
         display: flex;
         margin: 0;
         margin-bottom: 1em;
@@ -316,4 +316,20 @@ footer .social-icons {
         justify-content: space-around;
     }
 
+    footer {
+        margin: 0 1em;
+        padding: 1em;
+    }
+
+    footer .social-icons {
+        justify-content: space-around;
+    }
+
+    footer .social-icons li i {
+        font-size: 3em;
+    }
+
+    .footer-credit {
+        margin-top: 3em;
+    }
 }
